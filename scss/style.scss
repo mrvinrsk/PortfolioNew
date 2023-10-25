@@ -29,8 +29,15 @@
 }
 
 html, body {
-  min-height: 100vh;
   background-color: var(--clr-background);
+}
+
+.scroll-content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .transition-fade {
@@ -72,7 +79,7 @@ nav {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .25rem;
 
     li {
       line-height: 1.1;
@@ -82,12 +89,13 @@ nav {
         position: relative;
         cursor: pointer;
 
+        font-family: "Simple Marker", cursive;
         text-decoration: none;
-        font-size: min(8vmax, 70vw);
+        font-size: min(10vmax, 70vw);
         text-transform: uppercase;
         color: var(--clr-text);
 
-        height: min(8vmax, 70vw);
+        height: min(10vmax, 70vw);
         display: inline-block;
 
         &::before, &::after {
@@ -161,7 +169,8 @@ nav {
 
   &.open {
     &::before, &::after {
-      transform: translateY(-50%) rotate(45deg);
+      border-radius: 1px;
+      transform: translateY(-50%) rotate(45deg) scale(1.1);
     }
   }
 }

@@ -26,7 +26,8 @@ hamburger.addEventListener('click', () => {
     nav.classList.toggle('open');
 });
 
-window.Scrollbar.init(document.querySelector('#swup'), {
-    damping: 0.05,
-    renderByPixel: true,
+butter.init({
+    wrapperId: 'scroll',
+    wrapperDamper: 0.6,
+    cancelOnTouch: true
 });
